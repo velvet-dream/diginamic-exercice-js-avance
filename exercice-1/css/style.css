@@ -1,0 +1,40 @@
+html {
+	font-size: 1rem;
+	font-family: sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+.slideshow-wrapper {
+	overflow: hidden;
+	margin: auto;
+	background-color: lightgray;
+}
+
+.slideshow-wrapper:hover {
+	cursor: pointer;
+}
+
+.slideshow-controlers {
+	/* cette classe existe pour ajouter d'éventuels contrôlleurs. */
+	display: none;
+}
+
+.slideshow-item {
+	z-index: 0;
+	position: absolute;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+/* item du slideshow qui s'affiche par dessus le reste */
+.slideshow-item.active {
+	z-index: 1;
+	opacity: 1;
+}
